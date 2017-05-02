@@ -13,20 +13,21 @@ var Path = {
     if(typeof(str) !== 'string'){
       throw 'param str (' + str + ') is not a string';
     }
-
-    return str.replace(tildeRe, '~0').replace(slashRe, '~1');
+    return str;
+    //return str.replace(tildeRe, '~0').replace(slashRe, '~1');
   },
 
   unescape: function (str) {
-    if(typeof(str) == 'string') {
-      return str.replace(escapedSlashRe, '/').replace(escapedTildeRe, '~');
-    }
-    else {
-      return str;
-    }
+    //if(typeof(str) == 'string') {
+      //return str.replace(escapedSlashRe, '/').replace(escapedTildeRe, '~');
+    //}
+    //else {
+      //return str;
+    //}
+    return str;
   },
   concat: function(path, key){
-    return path + '/' + key;
+    return path + ' ‣ ' + key;
   }
 };
 
